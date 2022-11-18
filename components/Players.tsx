@@ -6,11 +6,11 @@ const Players = () => {
 
   return <div className="column">
     <h2>Convocados</h2>
-    <Droppable droppableId="player">
+    <Droppable droppableId="players">
       {(provided, snapshot) => (
         <div className="content" {...provided.droppableProps} ref={provided.innerRef}>
           {players.map((player, index) =>
-            <Draggable draggableId={player} key={player} index={index}>
+            <Draggable draggableId={player.name} key={player.name} index={index}>
               {(provided, snapshot) => (
                 <p
                   ref={provided.innerRef}
@@ -18,7 +18,7 @@ const Players = () => {
                   {...provided.dragHandleProps}
                   style={provided.draggableProps.style}
                 >
-                  {player}
+                  {player.name}
                 </p>
               )}
             </Draggable>

@@ -52,7 +52,7 @@ const Positions = () => {
         <Droppable droppableId={column.columnId}>
           {(provided) => (
             <div className="content" {...provided.droppableProps} ref={provided.innerRef}>
-              {column.data.map((cell, index) => <Draggable draggableId={cell} key={cell} index={index}>
+              {column.data.map((player, index) => <Draggable draggableId={player.name} key={player.name} index={index}>
                 {(provided, snapshot) =>
                   <p
                     ref={provided.innerRef}
@@ -60,9 +60,11 @@ const Positions = () => {
                     {...provided.dragHandleProps}
                     style={provided.draggableProps.style}
                   >
-                    {cell}
+                    {player.name}
                   </p>}
-              </Draggable>)}
+                </Draggable>
+              )}
+              {provided.placeholder}
             </div>
           )}
         </Droppable>
