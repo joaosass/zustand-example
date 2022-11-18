@@ -16,7 +16,7 @@ interface SelecaoState {
 }
 
 const useSelecao = create<SelecaoState>((set) => ({
-  players: ['Alisson', 'Ederson', 'Weverton', 'Danilo', 'Alex Sandro', 'Daniel Alves', 'Alex Telles', 'Militão', 'Marquinhos', 'Thiago Silva', 'Bremer', 'Bruno Guimarães', 'Casemiro', 'Fabinho', 'Fred', 'Paquetá', 'Everton Ribeiro', 'Neymar', 'Vinicius Júnior', 'Antony', 'Rodrygo', 'Raphinha', 'Richarlison', 'Pedro', 'Gabriel Jesus', 'Gabriel Martinelli'],
+  players: ['Alex Sandro', 'Alex Telles', 'Alisson', 'Antony', 'Bremer', 'Bruno Guimarães', 'Casemiro', 'Daniel Alves', 'Danilo', 'Ederson', 'Everton Ribeiro', 'Fabinho', 'Fred', 'Gabriel Jesus', 'Gabriel Martinelli', 'Marquinhos', 'Militão', 'Neymar', 'Paquetá', 'Pedro', 'Raphinha', 'Richarlison', 'Rodrygo', 'Thiago Silva', 'Vinicius Júnior', 'Weverton'],
   setPlayers: (players: string[]) => set(() => ({ players })),
   goalkeepers: [],
   setGoalkeepers: (goalkeepers: string[]) => set(() => ({ goalkeepers })),
