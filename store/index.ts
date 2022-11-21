@@ -6,6 +6,7 @@ import { PLAYERS } from '../constants';
 interface Player {
   name: string;
   number: number;
+  photo?: string;
 }
 
 interface SelecaoState {

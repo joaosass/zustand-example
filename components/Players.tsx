@@ -12,21 +12,21 @@ const Players = () => {
           {players.map((player, index) =>
             <Draggable draggableId={player.name} key={player.name} index={index}>
               {(provided, snapshot) => (
-                <p
+                <div
                   ref={provided.innerRef}
                   {...provided.draggableProps}
                   {...provided.dragHandleProps}
                   style={provided.draggableProps.style}
                 >
-                  {player.name}
-                </p>
+                  {player.photo ? <img src={player.photo} alt={player.name} /> : <p>{player.name}</p>}
+                </div>
               )}
             </Draggable>
           )}
           {provided.placeholder}
         </div>
       )}
-  </Droppable>
+    </Droppable>
   </div>
 };
 
